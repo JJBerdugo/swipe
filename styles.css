@@ -131,12 +131,15 @@
 
 .first-content-box{
     background: repeating-linear-gradient(170deg, rgb(255, 255, 255)50%,rgb(255, 255, 255) 70%, rgb(95, 37, 231)300%);
-
+    height: 500px;
+    position: absolute;
+    inset: 0; /*para absolute*/
+    z-index: -1; /*capas*/
 }
 .first-content {
     margin-left: 20px;
     margin-right: 20px;
-
+    position: relative;
 }
 .first-content h1{
     font-family: Roboto;
@@ -176,13 +179,16 @@
     }
 
 }
-
 @media screen and (width >= 768px){
     .main-txt-img__img{
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
     
     }
-
+    .main-txt-img__img--phone{
+        width: 300px;
+        }
     .partners {
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -198,13 +204,19 @@
     .first-content {
         margin-left: 10%;
         margin-right: 10%;
+        max-width: 85%;
+        align-items: center;
     }
     .first-content h1 {
-        font-size: 90px;
+        font-size: 80px;
     }
 
     .nav-top__items{
         display: flex;
+    }
+
+    .first-content-box{
+        margin:0;
     }
 
     .nav-top__buttom{
