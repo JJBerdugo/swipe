@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between ;
     align-items: center;
-    font-family: Roboto;
     margin-bottom: 45px;
     padding-top: 10px;
     flex-direction: row;
@@ -86,9 +85,9 @@
 }
 
 .main-txt-img__buttons{
-    margin-top: 10px;
+    margin-top: 25px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: row;
 
@@ -136,7 +135,9 @@
     inset: 0; /*para absolute*/
     z-index: -1; /*capas*/
 }
+
 .first-content {
+    font-family: Roboto,sans-serif;
     margin-left: 20px;
     margin-right: 20px;
     position: relative;
@@ -151,6 +152,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr ;
     row-gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .partners img{
@@ -161,8 +164,28 @@
 .main-txt-img__img{
     display: none;
 }
+/*SECTION-PAY*/
+.section-pay{
+    
+}
 
-
+.section-pay__body{
+    display: grid;
+    grid-template-columns: 33% 67%;
+    grid-template-rows: 25% 25% 50%;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-areas: 
+    "card slack"
+    "phone slack"
+    "phone balance";
+}
+.section-pay__body img{
+    
+}
+.section-pay__button-purple{
+    background-color: #7000ff;
+}
 
 @media screen and (width >= 425px){
 
