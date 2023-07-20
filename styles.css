@@ -109,8 +109,14 @@
 }
 .main-txt-img__buttons--black:hover {
     opacity: 75%;
-}
+    transition: 0.2s;
 
+}
+.main-txt-img__buttons img:hover {
+    transform: translateX(5px);
+    transition: 0.2s;
+
+}
 .main-txt-img__buttons--hiden{
     margin-left: 10px;
     color:#7000ff;
@@ -175,7 +181,6 @@
 .section-pay__head--2columns{
     display: flex;
     flex-direction: column;
-    margin-bottom: 10%;
 }
 .section-pay__head--2columns a{
     color: #7000ff;
@@ -207,10 +212,9 @@
     "phone slack"
     "phone balance";
     border-radius: 20%;
-    margin-top: 15%;
 }
 .section-pay__body img{
-    width: 97%;
+    max-width: 90%;
 }
 .balance{
     grid-area: balance;
@@ -242,7 +246,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 3%;
-        margin-bottom: 5%;
         
     }
     .section-pay__head{
@@ -281,7 +284,7 @@
     .first-content {
         margin-left: 10%;
         margin-right: 10%;
-        max-width: 85%;
+        max-width: 90%;
         align-items: center;
     }
     .first-content h1 {
@@ -313,6 +316,10 @@
         display: flex;
         justify-content: space-between;    
     }
-  
-
+    .partners img{
+        max-width: 50%;
+    }
+    .section-pay{
+        max-width: 100%;
+    }
 }
