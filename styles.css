@@ -112,11 +112,16 @@
     transition: 0.2s;
 
 }
-.main-txt-img__buttons img:hover {
+.main-txt-img__buttons--black:hover img {
     transform: translateX(5px);
     transition: 0.2s;
 
 }
+.main-txt-img__buttons--hiden:hover img{
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+
 .main-txt-img__buttons--hiden{
     margin-left: 10px;
     color:#7000ff;
@@ -192,7 +197,7 @@
     margin-bottom: 10%;
 }
 .section-pay{
-    background-color: #f7f9fc;
+    background-color: #ffffff;
     font-size: 18px;
 
 }
