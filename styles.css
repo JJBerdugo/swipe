@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between ;
     align-items: center;
-    font-family: Roboto;
     margin-bottom: 45px;
     padding-top: 10px;
     flex-direction: row;
@@ -86,9 +85,9 @@
 }
 
 .main-txt-img__buttons{
-    margin-top: 10px;
+    margin-top: 25px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: row;
 
@@ -110,6 +109,17 @@
 }
 .main-txt-img__buttons--black:hover {
     opacity: 75%;
+    transition: 0.2s;
+
+}
+.main-txt-img__buttons--black:hover img {
+    transform: translateX(5px);
+    transition: 0.2s;
+
+}
+.main-txt-img__buttons--hiden:hover img{
+    transform: translateX(5px);
+    transition: 0.2s;
 }
 
 .main-txt-img__buttons--hiden{
@@ -136,10 +146,13 @@
     inset: 0; /*para absolute*/
     z-index: -1; /*capas*/
 }
+
 .first-content {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto,sans-serif;
     margin-left: 20px;
     margin-right: 20px;
-    position: relative;
 }
 .first-content h1{
     font-family: Roboto;
@@ -150,19 +163,72 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr ;
-    row-gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
 }
 
 .partners img{
     width: 100%;
-
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .main-txt-img__img{
     display: none;
 }
+/*SECTION-PAY*/
 
+.section-pay__column-L{
+    margin-bottom: 10%;
+}
 
+.section-pay__head--2columns{
+    display: flex;
+    flex-direction: column;
+}
+.section-pay__head--2columns a{
+    color: #7000ff;
+    text-decoration-line: none;
+}
+
+.section-pay__head--title{
+    font-size: 33px;
+    margin-bottom: 10%;
+}
+.section-pay{
+    background-color: #ffffff;
+    font-size: 18px;
+
+}
+.section-pay__head--p{
+    margin-top: 5%;
+    color: #7000ff;
+    margin-bottom: 5%;
+}
+.section-pay__body{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 10% 20%;
+    row-gap: 5%;
+    column-gap: 5%;
+    grid-template-areas: 
+    "card slack"
+    "phone slack"
+    "phone balance";
+    border-radius: 20%;
+}
+.section-pay__body img{
+    max-width: 90%;
+}
+.balance{
+    grid-area: balance;
+    padding-bottom: -30%;
+}
+
+.section-pay__button-purple{
+    background-color: #7000ff;
+}
 
 @media screen and (width >= 425px){
 
@@ -180,11 +246,30 @@
 
 }
 @media screen and (width >= 768px){
+
+    .section-pay__head--2columns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3%;
+        
+    }
+    .section-pay__head{
+        margin-top: 3%;
+        margin-bottom: 3%;
+        }
+    .section-pay__head--title{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        }
+    .section-pay__column-L{
+    }
+    .first-content{
+        margin-left: 10%;
+        margin-right: 10%;
+  }
     .main-txt-img__img{
     display: flex;
-    justify-content: flex-end;
     align-items: flex-start;
-    
     }
     .main-txt-img__img--phone{
         width: 300px;
@@ -204,7 +289,7 @@
     .first-content {
         margin-left: 10%;
         margin-right: 10%;
-        max-width: 85%;
+        max-width: 90%;
         align-items: center;
     }
     .first-content h1 {
@@ -236,6 +321,10 @@
         display: flex;
         justify-content: space-between;    
     }
-  
-
+    .partners img{
+        max-width: 50%;
+    }
+    .section-pay{
+        max-width: 100%;
+    }
 }
