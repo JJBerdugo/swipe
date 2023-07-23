@@ -209,6 +209,7 @@ body {
     margin-top: 5%;
     color: #7000ff;
     margin-bottom: 5%;
+    z-index: 1;
 }
 .section-pay__body {
     display: grid;
@@ -253,19 +254,22 @@ body {
     z-index: 1;
     padding-top: 5%;
 }
+
 .section-API p {
     color: #ffffff;
-    font-size: 15px;
-    margin: 5px 0px 5px 0px;
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+    text-align: justify;
 }
 .section-API h3 {
-    margin: 5px 0px 5px 0px;
+    margin: 5px 0px 15px 0px;
     color: #ffffff;
     font-size: 20px;
+    text-align: justify;
 }
 .icons-img {
     width: 25%;
-    margin-top: 7%;
+    margin: 10% 0% 3% 0%;
 }
 .diagonal-box {
     display: flex;
@@ -302,6 +306,29 @@ body {
 .button-font-color-blue {
     color: #00d4ff;
 }
+.section-Why-swipe {
+    z-index: 1;
+    margin: 25% 0% 25% 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-2x2 {
+    display: flex;
+    flex-direction: column;
+}
+.column-2x2 img {
+    height: 60px;
+    width: 60px;
+}
+.column-2x2 p {
+    text-align: justify;
+    font-size: 15px;
+}
+
+.column-2x2 h3 {
+    margin: 3% 0% 3% 0%;
+}
 /* MEDIA@@@*/
 
 @media screen and (width >= 425px) {
@@ -326,6 +353,21 @@ body {
     }
 }
 @media screen and (width >= 768px) {
+    .section-WHY__4columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .section-API__RIGHT--2columns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .column-2x2 {
+        display: flex;
+        flex-direction: column;
+        padding-inline-end: 10%;
+    }
     .section-API p {
         font-size: 14px;
     }
@@ -383,6 +425,10 @@ body {
 }
 
 @media screen and (width >= 1024px) {
+    .section-WHY__4columns {
+        display: flex;
+        flex-direction: row;
+    }
     body {
         max-width: 1920px;
         display: flex;
@@ -398,9 +444,16 @@ body {
         padding-top: 0px;
         margin-top: 3%;
     }
+    .section-API__RIGHT__column-L p {
+        padding-inline-end: 10%;
+    }
+    .section-API__RIGHT {
+        padding-right: 2%;
+    }
     .section-API__RIGHT--2columns {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     .section-API__LEFT img {
         width: 90%;
