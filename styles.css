@@ -152,6 +152,8 @@
 .first-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Roboto, sans-serif;
     margin-left: 20px;
     margin-right: 20px;
@@ -199,7 +201,7 @@
     margin-bottom: 10%;
 }
 .section-pay {
-    background-color: #ffffff;
+    background-color: transparent;
     font-size: 18px;
 }
 .section-pay__head--p {
@@ -210,8 +212,8 @@
 .section-pay__body {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 15% 10% 20%;
-    row-gap: 5%;
+    grid-template-rows: 15% 10% 75%;
+    row-gap: 15%;
     column-gap: 5%;
     grid-template-areas:
         "card slack"
@@ -222,16 +224,96 @@
 .section-pay__body img {
     max-width: 90%;
 }
+.card {
+    grid-area: card;
+}
+.slack {
+    grid-area: slack;
+}
+.phone {
+    grid-area: phone;
+}
 .balance {
     grid-area: balance;
-    padding-bottom: -30%;
 }
 
 .section-pay__button-purple {
     background-color: #7000ff;
 }
 
+/*SECTION-API*/
+
+.section-API {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    z-index: 1;
+    padding-top: 5%;
+}
+.section-API p {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 5px 0px 5px 0px;
+}
+.section-API h3 {
+    margin: 5px 0px 5px 0px;
+    color: #ffffff;
+    font-size: 20px;
+}
+.icons-img {
+    width: 25%;
+    margin-top: 7%;
+}
+.diagonal-box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background: linear-gradient(#7000ff, #0a2540);
+    width: 200%;
+    transform: rotate(-10deg);
+    z-index: -1;
+    height: 100%;
+    margin-top: 15%;
+}
+
+.section-API__2Columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+.section-API__head--title {
+    color: #ffffff;
+}
+.section-API__LEFT {
+    display: none;
+}
+.section-API__LEFT img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 4%;
+}
+.section-API__button-blue {
+    background-color: #00d4ff;
+}
+.button-font-color-blue {
+    color: #00d4ff;
+}
+/* MEDIA@@@*/
+
 @media screen and (width >= 425px) {
+    .diagonal-box {
+        height: 100%;
+    }
+    .section-API__2Columns {
+        margin-top: 3%;
+    }
+    .icons-img {
+        width: 50px;
+    }
     .main-txt-img__buttons {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -244,6 +326,28 @@
     }
 }
 @media screen and (width >= 768px) {
+    .section-API p {
+        font-size: 14px;
+    }
+
+    .section-API__LEFT img {
+        width: 150%;
+    }
+    .section-API__2Columns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin-top: 10%;
+    }
+    .section-API__LEFT {
+        display: flex;
+        flex-direction: column;
+    }
+    .diagonal-box {
+        height: 120%;
+        margin-top: 20%;
+    }
     .section-pay__head--2columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -280,10 +384,26 @@
 }
 
 @media screen and (width >= 1024px) {
+    .diagonal-box {
+        height: 140%;
+        margin-top: 10%;
+    }
+    .section-API__2Columns {
+        display: flex;
+        align-items: center;
+        padding-top: 0px;
+        margin-top: 3%;
+    }
+    .section-API__RIGHT--2columns {
+        display: flex;
+        flex-direction: row;
+    }
+    .section-API__LEFT img {
+        width: 90%;
+    }
     .first-content {
         margin-left: 10%;
         margin-right: 10%;
-        max-width: 90%;
         align-items: center;
     }
     .first-content h1 {
@@ -315,7 +435,7 @@
         justify-content: space-between;
     }
     .partners img {
-        max-width: 50%;
+        max-width: 90%;
     }
     .section-pay {
         max-width: 100%;
