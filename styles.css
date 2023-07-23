@@ -211,21 +211,7 @@ body {
     margin-bottom: 5%;
     z-index: 1;
 }
-.section-pay__body {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 15% 10% 75%;
-    row-gap: 15%;
-    column-gap: 5%;
-    grid-template-areas:
-        "card slack"
-        "phone slack"
-        "phone balance";
-    border-radius: 20%;
-}
-.section-pay__body img {
-    max-width: 90%;
-}
+
 .card {
     grid-area: card;
 }
@@ -242,7 +228,15 @@ body {
 .section-pay__button-purple {
     background-color: #7000ff;
 }
-
+.section-pay__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-pay__body img {
+    margin-bottom: 30px;
+    max-width: 100%;
+}
 /*SECTION-API*/
 
 .section-API {
@@ -332,6 +326,18 @@ body {
 /* MEDIA@@@*/
 
 @media screen and (width >= 425px) {
+    .section-pay__body {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 15% 10% 75%;
+        row-gap: 15%;
+        column-gap: 5%;
+        grid-template-areas:
+            "card slack"
+            "phone slack"
+            "phone balance";
+        border-radius: 20%;
+    }
     .diagonal-box {
         height: 100%;
     }
