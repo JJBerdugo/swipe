@@ -462,6 +462,43 @@ body {
 .session-B p {
     margin: 12% 0% 12% 0%;
 }
+.footer {
+    padding: 1% 0% 5% 0%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.col-footer ul {
+    list-style: none;
+}
+.col-footer li {
+    margin: 10px 0px 10px 0px;
+}
+.col-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0px 10px 0px;
+}
+.col-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.footer-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+}
+.footer-logo {
+    width: 60%;
+}
 /* MEDIA@@@*/
 
 @media screen and (width >= 425px) {
