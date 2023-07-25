@@ -466,26 +466,35 @@ body {
     padding: 1% 0% 5% 0%;
     position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: rgba(0, 0, 0, 0.2);
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(0, 0, 0, 0.2);
+    width: 137.5%;
+    height: 125%;
+    margin-left: -25%;
+    margin-top: 0;
 }
 .col-footer ul {
     list-style: none;
 }
+
 .col-footer li {
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 20px 0px;
 }
 .col-footer a {
     color: #ffffff;
     text-decoration: none;
     margin: 10px 0px 10px 0px;
+    letter-spacing: 2px;
 }
 .col-footer {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    margin-left: 25%;
 }
 .footer-icon {
     display: flex;
@@ -499,9 +508,28 @@ body {
 .footer-logo {
     width: 60%;
 }
+.footer-icon a {
+    color: black;
+}
+.col-footer h3 {
+    font-size: large;
+    color: #ffffff;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
 /* MEDIA@@@*/
 
 @media screen and (width >= 425px) {
+    .col-footer {
+        display: block;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-left: 6%;
+    }
     .avatar-container {
         margin-top: 7%;
     }
@@ -579,8 +607,15 @@ body {
     }
 }
 @media screen and (width >= 768px) {
+    .col-footer {
+        margin-left: 33%;
+    }
     .session-SWIPE {
         margin-top: 35%;
+    }
+    .session-BB {
+        display: flex;
+        flex-direction: row;
     }
     .session-A {
         display: flex;
@@ -693,6 +728,14 @@ body {
 }
 
 @media screen and (width >= 1024px) {
+    .col-footer {
+        margin-left: 4%;
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .avatar-container {
         width: 130%;
     }
@@ -704,10 +747,6 @@ body {
     .check-SS {
         width: 150%;
         padding-left: 5%;
-    }
-    .session-BB {
-        display: flex;
-        flex-direction: row;
     }
     .session-B {
         display: flex;
@@ -816,6 +855,9 @@ body {
         max-width: 100%;
     }
     @media screen and (width >= 1440px) {
+        .footer {
+            justify-content: space-evenly;
+        }
         .diagonal-box2 {
             height: 110%;
         }
